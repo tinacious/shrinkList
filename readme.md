@@ -6,6 +6,8 @@ The shrinkList.js plugin does just that, shrinks lists.
 
 This plugin allows you to take a long unordered or ordered list with, for example, 10 items, but only show 5 initially, and create a link for you to show the remaining list items.
 
+View the demo [here](http://tinacious.github.io/shrinkList/).
+
 ## Customization
 
 You can customize the following:
