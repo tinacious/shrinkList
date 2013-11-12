@@ -7,6 +7,12 @@
 		<title>shrinkList jQuery plugin demo</title>
 		<link rel="stylesheet" type="text/css" href="http://christinaholly.com/site/templates/css/main.css">
 		<style>
+			.container {
+				max-width: 600px;
+			}
+			.site-header .logo {
+				width: 100%;
+			}
 			.logo span, .logo img {
 				display: block;
 				float: left;
@@ -17,7 +23,26 @@
 			.site-header {
 				padding: 5px 0;
 			}
+
+			/* demo stylels */
+			ul {
+				margin: 0 0 2em 0;
+				padding: 0;
+				list-style: none;
+			}
 		</style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		
+		<script src="shrinkList.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('#sample-list').shrinkList({
+					filterText: 'Show the rest of the list items',
+					filterSpeed: 250,
+					maxFilters: 4
+				})
+			})
+		</script>
 	</head>
 	<body>
 		<header class="site-header">
@@ -32,9 +57,21 @@
 		<section class="site-content">
 			<div class="container">
 				<h1>shrinkList jQuery plugin demo</h1>
+
+				<ul id="sample-list">
+					<li>Here is a list item</li>
+					<li>Here is another list item</li>
+					<li>And another list item</li>
+					<li>Yep, you guessed it, one more</li>
+					<li>This will be hidden</li>
+					<li>This will also be hidden until click</li>
+					<li>As will this one</li>
+				</ul>
+
+				<p>
+					<a href="http://github.com/tinacious/shrinkList" class="btn">Download on Github</a>
+				</p>
 			</div>
 		</section>
-			
-		<script src="js/main.js"></script>
 	</body>
 </html>
